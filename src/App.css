@@ -1,0 +1,57 @@
+:root {
+  --salmon: #ef9d71;
+  --black: var(--black);
+  --white: #fff;
+  --cyan: #aedee0;
+  --dCyan: #1f2f32;
+}
+*::selection {
+  background-color: var(--salmon);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  /* font-family: satoshi, system-ui; */
+}
+
+@font-face {
+  font-family: satoshi;
+  src: url("./assets/fonts/satoshi.ttf");
+}
+@font-face {
+  font-family: font-light;
+  src: url("./assets/fonts/light.woff");
+}
+@font-face {
+  font-family: font-medium;
+  src: url("./assets/fonts/medium.woff");
+}
+body[theme="black"] {
+  background-color: var(--black);
+  /* color: white; */
+}
+body[theme="black"] .section {
+  color: var(--white);
+}
+body[theme="white"] {
+  background-color: var(--white);
+  /* color: white; */
+}
+body[theme="white"] .section {
+  color: var(--white);
+}
+body[theme="cyan"] {
+  background-color: var(--cyan);
+  /* color: cyan; */
+}
+body[theme="cyan"] .section {
+  color: var(--black);
+}
+body[theme="salmon"] {
+  background-color: var(--salmon);
+  /* color: cyan; */
+}
+body[theme="salmon"] .section {
+  color: var(--black);
+}
