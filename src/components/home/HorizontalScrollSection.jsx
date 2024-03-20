@@ -32,9 +32,11 @@ export default function HorizontalScrollSection() {
               />
             </div>
           </Slide>
+
+          {/* slider 2 */}
           <Slide className={" font-satoshi-ff font-semibold"}>
             {/* top img */}
-            <div className="absolute -top-20 size-80 rounded-full overflow-hidden">
+            <div className="absolute -top-20 right-1/3 size-80 rounded-full overflow-hidden">
               <img
                 src={assets.person1}
                 alt=""
@@ -42,7 +44,7 @@ export default function HorizontalScrollSection() {
               />
             </div>
             {/* bottom left img*/}
-            <div className="absolute bottom-40 left-1/4 size-56 rounded-full overflow-hidden">
+            <div className="absolute bottom-40 left-[20%] size-48 rounded-full overflow-hidden">
               <img
                 src={assets.person2}
                 alt=""

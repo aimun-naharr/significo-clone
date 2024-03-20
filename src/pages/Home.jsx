@@ -2,10 +2,11 @@ import Craft from "../components/home/Craft";
 import HeroVideo from "../components/home/HeroVideo";
 import HorizontalScrollSection from "../components/home/HorizontalScrollSection";
 import MarqueeContainer from "../components/home/MarqueeContainer";
+import Team from "../components/home/Team";
 
 export default function Home() {
   return (
-    <div className="home w-full h-screen relative">
+    <div className="home w-full h-screen relative" id="home">
       {/* bottom text */}
       <div className="bottom-text section w-52 absolute z-[5] font-satoshi-ff bottom-[7%] left-10">
         <h2>
@@ -26,7 +27,10 @@ export default function Home() {
       {/* horizontal scroll section */}
       <HorizontalScrollSection />
 
-      <div className="h-screen"></div>
+      {/* team section */}
+      <Team />
+
+      {/* <div className="h-screen"></div> */}
     </div>
   );
 }
