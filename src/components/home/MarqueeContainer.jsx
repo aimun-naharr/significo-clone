@@ -6,7 +6,8 @@ const MarqueeElementRow = ({ arrayElements, className }) => {
   return (
     <div
       className={cn(
-        "flex gap-4 row w-full whitespace-nowrap font-light-ff font-bold section -translate-x-1/3 py-2",
+        "flex gap-4 row w-full whitespace-nowrap font-light-ff font-bold section -translate-x-1/3 py-2 ",
+
         className
       )}
     >
@@ -55,7 +56,10 @@ export default function MarqueeContainer() {
     { title: "Intuitive", imgSrc: assets.person2 },
   ];
   return (
-    <div className="marquee-container  w-full h-screen relative overflow-hidden z-[2]">
+    <div
+      id="marquee-container"
+      className="marquee-container  w-full h-screen relative overflow-hidden z-[2] scale-[3]"
+    >
       <div className="heading section absolute top-[8%] left-1/2 -translate-x-1/2">
         <h1 className="text-xl text-center font-satoshi-ff">
           Crafting a new paradigm of
@@ -67,19 +71,19 @@ export default function MarqueeContainer() {
       <div className="w-[90%] h-96 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
         <MarqueeElementRow
           arrayElements={marqueeArray}
-          className="-translate-x-20"
+          className="-translate-x-20 marquee-left"
         />
         <MarqueeElementRow
           arrayElements={marqueeArray1}
-          className="-translate-x-1/4"
+          className="-translate-x-1/4 marquee-right"
         />
         <MarqueeElementRow
           arrayElements={marqueeArray2}
-          className="-translate-x-1/4"
+          className="-translate-x-1/4 marquee-left"
         />
         <MarqueeElementRow
           arrayElements={marqueeArray1}
-          className="-translate-x-1/4"
+          className="-translate-x-1/4 marquee-right"
         />
       </div>
     </div>
