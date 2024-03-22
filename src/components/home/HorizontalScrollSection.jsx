@@ -1,12 +1,13 @@
-import React from "react";
-import { cn } from "../../utils";
+import gsap from "gsap";
+import React, { useEffect } from "react";
 import { assets } from "../../constants";
+import { cn } from "../../utils";
 
 const Slide = ({ children, className = "" }) => {
   return (
     <div
       className={cn(
-        "slide w-full h-screen flex-shrink-0 bg-ed-300 border-2 relative flex items-center justify-center",
+        "slide w-full h-screen flex-shrink-0  relative flex items-center justify-center",
         className
       )}
     >
@@ -15,10 +16,24 @@ const Slide = ({ children, className = "" }) => {
   );
 };
 export default function HorizontalScrollSection() {
+  useEffect(() => {
+    gsap.to(".slide", {
+      scrollTrigger: {
+        trigger: "#horizontal-section",
+        start: "top top",
+        bottom: "bottom bottom",
+        scrub: true,
+      },
+      xPercent: -200,
+    });
+  }, []);
   return (
-    <div className="w-full">
-      <div className="h-[400vh] relative">
-        <div className="slides w-full h-[100vh] flex sticky top-0 left-0">
+    <div className="w-full " id="horizontal-section">
+      <div className="h-[400vh] relative ">
+        <div
+          id="horizontal-slider"
+          className="slides w-full h-[100vh] flex sticky top-0 left-0 overflow-hidden"
+        >
           <Slide>
             <div className="text-8xl font-light-ff">
               <h1>Real Talk</h1>
@@ -34,7 +49,7 @@ export default function HorizontalScrollSection() {
           </Slide>
 
           {/* slider 2 */}
-          <Slide className={" font-satoshi-ff font-semibold"}>
+          <Slide className={"font-satoshi-ff font-semibold"}>
             {/* top img */}
             <div className="absolute -top-20 right-1/3 size-80 rounded-full overflow-hidden">
               <img

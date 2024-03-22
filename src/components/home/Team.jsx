@@ -48,7 +48,7 @@ export default function Team() {
     },
   ];
   return (
-    <div>
+    <div className="mt-20">
       <h1 className="text-center  text-7xl font-light-ff">Our Team</h1>
       <div className="md:px-40 px-10 my-10">
         {teamsData.map((team, i) => (

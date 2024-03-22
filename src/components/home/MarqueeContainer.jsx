@@ -1,19 +1,18 @@
 import React from "react";
-import { cn } from "../../utils";
 import { assets } from "../../constants";
+import { cn } from "../../utils";
 
 const MarqueeElementRow = ({ arrayElements, className }) => {
   return (
     <div
       className={cn(
         "flex gap-4 row w-full whitespace-nowrap font-light-ff font-bold section -translate-x-1/3 py-2 ",
-
         className
       )}
     >
       {arrayElements.map((el, i) => (
         <div key={i} className="flex gap-4 items-center ">
-          <h1 className="text-8xl lowercase ">{el.title}</h1>
+          <h1 className="lg:text-5xl xl:text-7xl  lowercase ">{el.title}</h1>
           <div className="size-16 overflow-hidden rounded-full">
             <img
               src={el.imgSrc}
