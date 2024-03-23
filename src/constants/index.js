@@ -37,5 +37,24 @@ const craftCardElements = [
 ];
 
 
+
+
+
+
 export const assets = { heroVideo, person1, person2, person3, person4, person5 }
-export const dataSets = { craftCardElements }
+const teamsData = [
+    { name: "Dr. Rick McCartney", post: "CEO", img: assets.person1 },
+    { name: "Chris Koha", post: "COO", img: assets.person2 },
+    {
+        name: "Caroline Nieto",
+        post: "Chief Product officer",
+        img: assets.person3,
+    },
+    { name: "Victor Albatros", post: "CTO", img: assets.person4 },
+    {
+        name: "Michael Robbin",
+        post: "Chief Innovation Officer",
+        img: assets.person5,
+    },
+];
+export const dataSets = { craftCardElements, teamsData }

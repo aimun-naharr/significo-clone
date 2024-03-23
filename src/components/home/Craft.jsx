@@ -1,10 +1,10 @@
 import gsap from "gsap";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { dataSets } from "../../constants";
 
 const Card = ({ card }) => {
   return (
-    <div className="craft-card border border-black p-8 flex items-center gap-20 w-[520px] font-satoshi-ff transition-all">
+    <div className="craft-card border border-black p-8 flex items-center gap-20 w-[520px] font-satoshi-ff transition-all ">
       <div className="flex flex-col gap-4">
         <h2 className="text-2xl font-bold">{card.title}</h2>
         <p>{card.description}</p>
@@ -46,18 +46,18 @@ export default function Craft() {
       },
       backgroundColor: "black",
       color: "#aedee0",
-      // width: "550px",
+      width: "550px",
       paddingLeft: "3rem",
       paddingRight: "3rem",
       stagger: 1.5,
-      ease: "back.inOut",
+      ease: "circ.out",
     });
 
     // gsap.to("");
   }, []);
   return (
     <div
-      className="craft w-full px-10 flex py-10 md:gap-10 section relative"
+      className="craft w-full px-10 flex py-10 md:gap-10  relative"
       id="crafts"
     >
       {/* left part */}

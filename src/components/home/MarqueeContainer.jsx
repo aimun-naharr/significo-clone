@@ -6,7 +6,7 @@ const MarqueeElementRow = ({ arrayElements, className }) => {
   return (
     <div
       className={cn(
-        "flex gap-4 row w-full whitespace-nowrap font-light-ff font-bold section -translate-x-1/3 py-2 ",
+        "flex gap-4 row w-full whitespace-nowrap font-light-ff font-bold  -translate-x-1/3 py-2 ",
         className
       )}
     >
