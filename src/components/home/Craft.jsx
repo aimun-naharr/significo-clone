@@ -57,8 +57,9 @@ export default function Craft() {
   }, []);
   return (
     <div
-      className="craft w-full px-10 flex py-10 md:gap-10  relative"
+      className="craft w-full px-10 flex py-10 md:gap-10  relative section"
       id="crafts"
+      data-color="cyan"
     >
       {/* left part */}
       <div className=" py-2 w-full flex flex-col gap-10 sticky top-0 left-0 h-fit">

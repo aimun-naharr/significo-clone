@@ -63,7 +63,7 @@ export default function Team() {
   }, []);
 
   return (
-    <div className="mt-20 mb-40">
+    <div className="mt-20 mb-40 section" data-color="white">
       <h1 className="text-center  text-7xl font-light-ff">Our Team</h1>
       <div className="md:px-40 px-10 my-10">
         {dataSets.teamsData.map((team, i) => (

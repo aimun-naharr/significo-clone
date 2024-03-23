@@ -48,7 +48,7 @@ export default function Home() {
   }, []);
   return (
     <div className="home w-full h-screen relative" id="home">
-      <div className="relative h-[150vh]">
+      <div className="relative h-[150vh] section ">
         <div className="sticky top-0 left-0 w-full h-screen">
           {/* bottom text */}
 
