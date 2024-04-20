@@ -1,17 +1,23 @@
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
 import { useEffect } from "react";
 import Craft from "../components/home/Craft";
 import HeroVideo from "../components/home/HeroVideo";
 import HorizontalScrollSection from "../components/home/HorizontalScrollSection";
 import MarqueeContainer from "../components/home/MarqueeContainer";
 import Team from "../components/home/Team";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
 gsap.registerPlugin(ScrollTrigger);
 export default function Home() {
   useEffect(() => {
+    (async () => {
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      const locomotiveScroll = new LocomotiveScroll();
+    })();
+  }, []);
+  useEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: "#home",
+        trigger: document.documentElement,
         start: "2% top",
         // end: "50% bottom",
         scrub: true,
