@@ -67,7 +67,7 @@ export default function MarqueeContainer() {
           healthcare, one that is
         </h1>
       </div>
-      <div className="w-[90%] h-96 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+      <div className=" h-96 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
         <MarqueeElementRow
           arrayElements={marqueeArray}
           className="-translate-x-20 marquee-left"
