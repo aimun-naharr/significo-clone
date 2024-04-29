@@ -28,13 +28,16 @@ export default function Craft() {
       {
         y: "40px",
         opacity: 0,
-        stagger: 0.5,
-        ease: "power4.out",
       },
       {
         y: 0,
         opacity: 1,
-        stagger: 0.5,
+        stagger: 0.3,
+        duration: 0.5,
+        ease: "physics2.out", // Use physics2D easing
+        velocity: 100, // Initial velocity (optional)
+        friction: 0.2, // Friction coefficient (higher = more damping)
+        resistance: 300, // Resistance (higher = slower settling)
       }
     );
     gsap.to(".craft-card", {
@@ -49,15 +52,18 @@ export default function Craft() {
       width: "550px",
       paddingLeft: "3rem",
       paddingRight: "3rem",
-      stagger: 1.5,
-      ease: "circ.out",
+      stagger: 0.5,
+      ease: "physics2.out", // Use physics2D easing
+      velocity: 100, // Initial velocity (optional)
+      friction: 0.2, // Friction coefficient (higher = more damping)
+      resistance: 300, // Resistance (higher = slower settling)
     });
 
     // gsap.to("");
   }, []);
   return (
     <div
-      className="craft w-full px-10 flex py-10 md:gap-10  relative section"
+      className="craft w-full px-10 flex py-10 md:gap-10 relative section"
       id="crafts"
       data-color="cyan"
     >

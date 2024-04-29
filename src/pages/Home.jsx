@@ -15,6 +15,12 @@ export default function Home() {
     })();
   }, []);
   useEffect(() => {
+    window.addEventListener("mousemove", (dets) => {
+      gsap.to("#cursor", {
+        x: dets.clientX,
+        y: dets.clientY,
+      });
+    });
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: document.documentElement,
@@ -51,14 +57,34 @@ export default function Home() {
         },
         "b"
       );
+
+    const sections = document.querySelectorAll(".section");
+    sections.forEach((section) => {
+      ScrollTrigger.create({
+        trigger: section,
+        start: "top 50%",
+        end: "bottom 40%",
+        // markers: true,
+        onEnter: () => {
+          document.body.setAttribute("theme", section.dataset.color);
+        },
+        onEnterBack: () => {
+          document.body.setAttribute("theme", section.dataset.color);
+        },
+      });
+    });
   }, []);
   return (
     <div className="home w-full h-screen relative" id="home">
-      <div className="relative h-[150vh] section ">
+      <div
+        id="cursor"
+        className="size-4 rounded-full bg-white fixed -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+      ></div>
+      <div className="relative h-[150vh]  ">
         <div className="sticky top-0 left-0 w-full h-screen">
           {/* bottom text */}
 
-          <div className="bottom-text section w-52 absolute z-[5] font-satoshi-ff bottom-[7%] left-10">
+          <div className="bottom-text  w-52 absolute z-[5] font-satoshi-ff bottom-[7%] left-10 text-white">
             <h2>
               {" "}
               We build big ideas. Software. Apps. Tools. For real people. Real

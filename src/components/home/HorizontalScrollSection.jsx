@@ -28,7 +28,7 @@ export default function HorizontalScrollSection() {
     });
   }, []);
   return (
-    <div className="w-full " id="horizontal-section">
+    <div className="w-full section" id="horizontal-section" data-color="salmon">
       <div className="h-[400vh] relative ">
         <div
           id="horizontal-slider"

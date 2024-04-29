@@ -3,8 +3,9 @@ import { assets } from "../../constants";
 export default function HeroVideo() {
   return (
     <div
+      data-color="black"
       id="hero-video"
-      className="video z-[3] w-full h-screen absolute top-0 left-0 overflow-hidden "
+      className="video z-[3] w-full h-screen absolute top-0 left-0 overflow-hidden section"
       style={{ "--clip": "100%" }}
     >
       <video

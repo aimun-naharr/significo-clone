@@ -44,6 +44,7 @@ export default function MarqueeContainer() {
     { title: "Useful", imgSrc: assets.person1 },
     { title: "Empathetic", imgSrc: assets.person3 },
     { title: "Useful", imgSrc: assets.person1 },
+    { title: "Useful", imgSrc: assets.person1 },
   ];
   const marqueeArray2 = [
     { title: "Intuitive", imgSrc: assets.person5 },
@@ -57,9 +58,10 @@ export default function MarqueeContainer() {
   return (
     <div
       id="marquee-container"
-      className="marquee-container  w-full h-screen relative overflow-hidden z-[2] scale-[3]"
+      data-color="black"
+      className="marquee-container  w-full h-screen relative overflow-hidden z-[2] scale-[4] section"
     >
-      <div className="heading section absolute top-[8%] left-1/2 -translate-x-1/2">
+      <div className="heading absolute top-[8%] left-1/2 -translate-x-1/2">
         <h1 className="text-xl text-center font-satoshi-ff">
           Crafting a new paradigm of
         </h1>
@@ -74,15 +76,15 @@ export default function MarqueeContainer() {
         />
         <MarqueeElementRow
           arrayElements={marqueeArray1}
-          className="-translate-x-1/4 marquee-right"
+          className="-translate-x-1/5 marquee-right"
         />
         <MarqueeElementRow
           arrayElements={marqueeArray2}
-          className="-translate-x-1/4 marquee-left"
+          className="-translate-x-20 marquee-left"
         />
         <MarqueeElementRow
           arrayElements={marqueeArray1}
-          className="-translate-x-1/4 marquee-right"
+          className="-translate-x-1/5 marquee-right"
         />
       </div>
     </div>

@@ -27,6 +27,9 @@
   font-family: font-medium;
   src: url("./assets/fonts/medium.woff");
 }
+body {
+  transition: background-color ease-out 0.5s;
+}
 body[theme="black"] {
   background-color: var(--black);
   /* color: white; */
